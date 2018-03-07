@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>index</title>
+</head>
+<body>
+    <h2>{{mensaje}}</h2>
+    
+    <form method="post" action="index.php?ruta=index&accion=registrar" enctype="multipart/form-data">
+        <h2>Registro</h2>
+        <input type="text" name="nombre" placeholder="nombre" required><br>
+        <input type="text" name="apellido" placeholder="apellidos"><br>
+        <input type="text" name="nick" placeholder="nick" required><br>
+        <input type="email"  name="correo" placeholder="correo" required><br>
+        <input type="password" name="clave" placeholder="password" required><br>
+        <input type="password" name="reClave" placeholder="repassword" required><br>
+        <input type="submit" value="Registrar" />
+    </form>
+    <form method="post" action="index.php?ruta=index&accion=login" enctype="multipart/form-data">
+         <h2>Log in</h2>
+        <input type="text" name="correo" placeholder="correo o nick" required><br>
+        <input type="password" name="clave" placeholder="password" required><br>
+        <input type="submit" value="Entrar" />
+    </form>
+    <form method="post" action="index.php?ruta=index&accion=recuperar" enctype="multipart/form-data">
+         <h2>Contraseña olvidada</h2>
+        <input type="email" name="correo" placeholder="correo" required><br>
+        <input type="submit" value="Recuperar" />
+    </form>
+    <form method="post" action="index.php?ruta=index&accion=reactivar" enctype="multipart/form-data">
+        <h2>Mandar correo de verificación</h2>
+        <input type="email" name="correo" placeholder="correo" required><br>
+        <input type="submit" value="Recuperar" />
+    </form>
+    
+   <!--<p>______________________________________________________________________________________________________</p> 
+    <h2>Registro AJAX</h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="nombre" placeholder="nombre" required><br>
+        <input type="text" name="apellido" placeholder="apellidos"><br>
+        <input type="text" name="nick" placeholder="nick" required><br>
+        <input type="email" id="correo" name="correo" placeholder="correo" required><br>
+        <input type="password" id="clave" name="clave" placeholder="password" required><br>
+        <input type="password" id="reClave" name="reClave" placeholder="repassword" required><br>
+        <input type="submit" id="boton" value="Registrar" />
+        <span id="mensaje"></span>
+    </form>
+    -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!--jquery -->
+    <script src="js/ajax.js"></script>
+</body>
+</html>

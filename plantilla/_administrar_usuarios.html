@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <h1>Panel de administrador</h1>
+        <h2>Listado de usuarios</h2>
+        <table class="paleBlueRows">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Nick</th>
+                    <th>Correo</th>
+                    <th>Tipo</th>
+                    <th>Verificado</th>
+                    <th>Fecha Alta</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{lineasUsuario}}
+                <tr>
+            </tbody>
+        </table>
+
+
+        <div>{{paginacion}}</div>
+        <h2>{{resultadoAccion}}</h2>
+        <br>
+        <a href="index.php?accion=addUsuarioFromAdminPlantilla">Añadir Usuario</a>
+        <br>
+        <a href="index.php">Volver</a>
+
+        <!--<ul id="lineasUsuario">-->
+
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--jquery -->
+    <script src="js/ajax.js"></script>
+    <!--aquí van nuestras llamadas ajax -->
+</body>
+
+</html>
